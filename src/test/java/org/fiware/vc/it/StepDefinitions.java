@@ -301,7 +301,7 @@ public class StepDefinitions {
 		delegationEvidence.notOnOrAfter = Instant.now().plus(Duration.of(10, ChronoUnit.SECONDS)).getEpochSecond();
 		delegationEvidence.policyIssuer = PacketDeliveryEnvironment.PACKET_DELIVERY_EORI;
 		Target target = new Target();
-		target.accessSubject = HappyPetsEnvironment.HAPPYPETS_EORI;
+		target.accessSubject = HappyPetsEnvironment.HAPPYPETS_DID;
 		delegationEvidence.target = target;
 
 		PolicyResource policyResource = new PolicyResource();

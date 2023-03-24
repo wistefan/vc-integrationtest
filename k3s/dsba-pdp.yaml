@@ -262,8 +262,6 @@ spec:
               value: "true"
             - name: ISHARE_TRUSTED_FINGERPRINTS_LIST
               value: "D2F62092F982CF783D4632BD86FA86C3FBFDB2D8C8A58BC6809163FCF5CD030B"
-            - name: PROVIDER_ID
-              value: "EU.EORI.PACKETDELIVERY"
             - name: TRUSTED_VERIFIERS
               value: "http://vcverifier:7070/.well-known/jwks"
             - name: MYSQL_HOST

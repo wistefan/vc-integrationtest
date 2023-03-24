@@ -70,7 +70,7 @@
         <kong.image>quay.io/fiware/kong:0.5.2</kong.image>
         <keyrock.image>quay.io/fiware/idm:8.3.0</keyrock.image>
         <orion-ld.image>quay.io/fiware/orion-ld:1.1.2</orion-ld.image>
-        <dsba-pdp.image>quay.io/fiware/dsba-pdp:0.3.3</dsba-pdp.image>
+        <dsba-pdp.image>quay.io/fiware/dsba-pdp:0.3.4</dsba-pdp.image>
     </properties>
 
     <dependencyManagement>
