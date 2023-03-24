@@ -378,6 +378,12 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-failsafe-plugin</artifactId>
+                        <configuration>
+                            <failIfNoTests>true</failIfNoTests>
+                            <includes>
+                                <include>**/RunCucumberTest.java</include>
+                            </includes>
+                        </configuration>
                         <executions>
                             <execution>
                                 <id>test</id>
@@ -410,7 +416,19 @@
                                     <goal>rm</goal>
                                 </goals>
                                 <configuration>
+                                    <dockerImages>
+                                        <dockerImage>keycloak</dockerImage>
+                                        <dockerImage>keycloak-vc-issuer</dockerImage>
+                                        <dockerImage>vc-verifier</dockerImage>
+                                        <dockerImage>waltid-ssikit</dockerImage>
+                                        <dockerImage>satellite</dockerImage>
+                                        <dockerImage>kong</dockerImage>
+                                        <dockerImage>dsba-pdp</dockerImage>
+                                        <dockerImage>keyrock</dockerImage>
+                                        <dockerImage>orion-ld</dockerImage>
+                                    </dockerImages>
                                     <streamLogs>true</streamLogs>
+                                    <manifests>${project.basedir}/k3s/</manifests>
                                     <portBindings>
                                         <!-- verifier -->
                                         <portBinding>7070:7070</portBinding>
