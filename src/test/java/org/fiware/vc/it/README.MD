@@ -14,3 +14,7 @@ The components involved are:
 * [Orion-LD](https://github.com/FIWARE/context.Orion-LD) as [NGSI-LD](https://www.etsi.org/deliver/etsi_gs/CIM/001_099/009/01.06.01_60/gs_cim009v010601p.pdf) ContextBroker, to provide a backend-service.
 * [iShare-JWT-Helper](https://github.com/wistefan/ishare-jwt-helper) as a convenience service for generating iShare-compliant tokens to be used with Keyrock.
 
+
+## Local setup
+
+In order to spin-up a local-environment, the maven-profile ```dev``` is provided. Its using the [kokuwaio/k3s-maven-plugin](https://github.com/kokuwaio/k3s-maven-plugin) 
