@@ -38,6 +38,19 @@ public class CommonSteps extends StepDefinitions {
 		await().atMost(Duration.of(1, ChronoUnit.MINUTES))
 				.until(() -> HTTP_CLIENT.send(wellKnownRequest, HttpResponse.BodyHandlers.ofString())
 						.statusCode() == 200);
+
+		// this assures that the realm is successfully imported
+		await().atMost(Duration.of(2, ChronoUnit.MINUTES))
+				.until(() -> {
+					try {
+						getUserTokenForAccountsAtHappypets(HappyPetsEnvironment.HAPPTYPETS_GOLD_USER,
+								HappyPetsEnvironment.HAPPTYPETS_GOLD_USER_PASSWORD);
+						return true;
+					} catch (Exception e) {
+						log.warn("Setup not finished.", e);
+						return false;
+					}
+				});
 	}
 
 	@When("The policies are properly setup.")
