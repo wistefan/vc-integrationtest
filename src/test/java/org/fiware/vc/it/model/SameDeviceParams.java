@@ -3,7 +3,7 @@ package org.fiware.vc.it.model;
 import lombok.Data;
 
 @Data
-public class StartSameDeviceParams {
+public class SameDeviceParams {
 
 	private String responseType;
 	private String responseMode;
