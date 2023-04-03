@@ -1,14 +1,12 @@
 package org.fiware.vc.it.model;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.cucumber.java.eo.Se;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.HttpStatus;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.utils.URLEncodedUtils;
-import org.fiware.vc.it.PacketDeliveryEnvironment;
 
 import javax.ws.rs.core.MediaType;
 import java.net.URI;

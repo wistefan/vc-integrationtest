@@ -1,5 +1,6 @@
 package org.fiware.vc.it;
 
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -7,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.fiware.vc.it.model.ApplicationConfig;
 import org.fiware.vc.it.model.AuthResponseParams;
 import org.fiware.vc.it.model.SameDeviceParams;
+import org.fiware.vc.it.model.UserEnvironment;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -20,6 +22,11 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  */
 @Slf4j
 public class HappypetsToPacketDeliveryStandardScenario extends StepDefinitions {
+
+	@Before
+	public void setupEnvironment() {
+		userEnvironment = new UserEnvironment();
+	}
 
 	@Given("An application provides access to PacketDelivery.")
 	public void setupApplication() throws Exception {
